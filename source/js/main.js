@@ -1,10 +1,16 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import {lazySizes} from './vendor/lazysizes';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
+  const picture = document.querySelectorAll('[data-validate="picture"]');
+
+  picture.forEach((e) => {
+    e.style.display = 'block';
+  });
 
   // Utils
   // ---------------------------------
@@ -21,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    lazySizes();
   });
 });
 

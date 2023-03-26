@@ -1,0 +1,146 @@
+.gym {
+  background-color: $color-default-white;
+  color: $color-dark;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include vp-1199 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+.gym__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include vp-1199 {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+.gym__wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  @include vp-767 {
+    margin-bottom: 40px;
+  }
+}
+
+.gym__wrapper video {
+  margin: 0 auto;
+  margin-top: -100px;
+  cursor: pointer;
+  width: 364px;
+  height: 228px;
+  object-fit: cover;
+
+  @include vp-1199 {
+    width: 266px;
+    height: 167px;
+    margin-top: -80px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.gym__inner {
+  display: flex;
+  flex-direction: column;
+  max-width: 355px;
+  margin-left: auto;
+  margin-right: 85px;
+
+  @include vp-1199 {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+  }
+
+  @include vp-767 {
+    align-items: flex-start;
+    padding-left: 15px;
+  }
+}
+
+.gym__inner h2 {
+  font-family: "Alumni Sans", "Tahoma", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  margin-bottom: 25px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 6px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 20px;
+  }
+}
+
+.gym__inner b {
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 55px;
+
+  @include vp-1199 {
+    margin-bottom: 50px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 40px;
+  }
+}
+
+.gym__inner p {
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+    @include vp-1199 {
+      display: none;
+    }
+  }
+
+  @include vp-1199 {
+    margin-bottom: 50px;
+    max-width: 510px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    margin-bottom: 40px;
+    max-width: 100%;
+    text-align: left;
+  }
+}
+
+.gym .container {
+  @include vp-767 {
+    padding: 0;
+  }
+}

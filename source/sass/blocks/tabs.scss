@@ -1,0 +1,179 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.tabs__controls {
+  display: flex;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+  padding-bottom: 20px;
+  margin-bottom: 39px;
+
+  @include vp-1199 {
+    margin-bottom: 45px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 35px;
+    width: 100%;
+  }
+}
+
+.tabs__control {
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: rgba(16, 38, 84, 0.5);
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-right: 46px;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+    margin-right: 54px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: auto;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.tabs__content {
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.tabs__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+  }
+
+  @include vp-767 {
+    gap: 35px;
+  }
+}
+
+.tabs__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-default-white;
+  padding: 68px 77px;
+  min-width: 360px;
+
+  @include vp-1199 {
+    padding: 68px 118px;
+    min-width: 442px;
+  }
+
+  @include vp-767 {
+    padding: 42px 55px;
+    min-width: auto;
+  }
+}
+
+.tabs__item h3 {
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 29px;
+  margin-bottom: 22px;
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+.tabs__item span {
+  display: block;
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 96px;
+
+  @include vp-767 {
+    margin-bottom: 81px;
+  }
+}
+
+.tabs__item p {
+  position: relative;
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  color: #103aae;
+  margin-bottom: 59px;
+  z-index: 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    font-size: 100px;
+    line-height: 150px;
+    color: #e8e8e8;
+    z-index: -1;
+    top: -50px;
+    left: -20px;
+
+    @include vp-767 {
+      font-size: 80px;
+      line-height: 120px;
+    }
+  }
+
+  @include vp-767 {
+    font-size: 48px;
+    line-height: 72px;
+    margin-bottom: 50px;
+  }
+}
+
+.tabs__item b {
+  color: $color-dark;
+  margin-left: 14px;
+
+  @include vp-767 {
+    margin-left: 10px;
+  }
+}
+
+.tabs__item a {
+  color: $color-dark;
+  border: 2px solid $color-dark;
+}
+
+.tabs__item--coach p::before {
+  content: "5000";
+}
+
+.tabs__item--day p::before {
+  content: "1700";
+}
+
+.tabs__item--full p::before {
+  content: "2700";
+}

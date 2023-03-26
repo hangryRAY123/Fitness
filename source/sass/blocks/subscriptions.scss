@@ -1,5 +1,103 @@
-.rub {
-  font-family: "Rouble";
-  font-weight: normal;
-	font-style: normal;
+.subscriptions {
+  background-color: #f8f9fc;
+  color: $color-dark;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  // background-image: image-set(
+  //     url("../img/subscriptions/subscriptions-desktop.webp") 1x,
+  //     url("../img/subscriptions/subscriptions-desktop.png") 1x
+  //   );
+  //   background-repeat: no-repeat;
+  //   background-position: 110% 110%;
+  //   background-size: 376px 330px;
+
+  @include vp-1199 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+.subscriptions__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 376px;
+    height: 330px;
+    top: 560px;
+    right: -20%;
+    background-image: image-set(
+      url("../img/subscriptions/subscriptions-desktop.webp") 1x,
+      url("../img/subscriptions/subscriptions-desktop.png") 1x
+    );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include retina {
+      background-image: image-set(
+        url("../img/subscriptions/subscriptions-desktop@2x.webp") 1x,
+        url("../img/subscriptions/subscriptions-desktop@2x.png") 1x
+      );
+    }
+
+    @include vp-1199 {
+      width: 340px;
+      height: 297px;
+      top: 1680px;
+      right: -45%;
+      background-image: image-set(
+        url("../img/subscriptions/subscriptions-tablet.webp") 1x,
+        url("../img/subscriptions/subscriptions-tablet.png") 1x
+      );
+
+      @include retina {
+        background-image: image-set(
+          url("../img/subscriptions/subscriptions-tablet@2x.webp") 1x,
+          url("../img/subscriptions/subscriptions-tablet@2x.png") 1x
+        );
+      }
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  @include vp-1199 {
+    width: 442px;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.subscriptions__wrapper h2 {
+  font-family: "Alumni Sans", "Tahoma", sans-serif;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  margin-bottom: 25px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 35px;
+  }
 }
