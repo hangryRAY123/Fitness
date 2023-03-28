@@ -3,6 +3,7 @@
   justify-content: space-between;
   color: $color-default-white;
   background-color: transparent;
+  align-items: center;
 }
 
 .header img {
@@ -20,7 +21,7 @@
 .header__list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 200px;
+  max-width: 142px;
 }
 
 .header__link {

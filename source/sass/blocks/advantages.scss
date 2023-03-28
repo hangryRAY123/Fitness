@@ -72,9 +72,17 @@
   }
 }
 
-.advantages__item b {
+.advantages__item div {
   display: flex;
   flex-direction: column;
+
+  @include vp-767 {
+    align-items: center;
+  }
+}
+
+.advantages__item b {
+  display: block;
   font-family: "Roboto Condensed", "Tahoma", sans-serif;
   font-weight: 700;
   font-size: 71px;
@@ -93,8 +101,6 @@
 
   @include vp-767 {
     margin-right: 0;
-    flex-direction: column;
-    align-items: center;
   }
 }
 
@@ -113,16 +119,10 @@
   font-weight: 700;
   font-size: 22px;
   line-height: 33px;
-  display: flex;
-  flex-direction: column;
 
   @include vp-1199 {
     font-size: 20px;
     line-height: 30px;
-  }
-
-  @include vp-767 {
-    align-items: center;
   }
 }
 

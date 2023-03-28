@@ -3,13 +3,6 @@
   color: $color-dark;
   padding-top: 120px;
   padding-bottom: 120px;
-  // background-image: image-set(
-  //     url("../img/subscriptions/subscriptions-desktop.webp") 1x,
-  //     url("../img/subscriptions/subscriptions-desktop.png") 1x
-  //   );
-  //   background-repeat: no-repeat;
-  //   background-position: 110% 110%;
-  //   background-size: 376px 330px;
 
   @include vp-1199 {
     padding-top: 100px;

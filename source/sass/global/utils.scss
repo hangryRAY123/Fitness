@@ -17,6 +17,16 @@
   }
 }
 
+.wrapper__box {
+  display: flex;
+  justify-content: center;
+
+  @include vp-1199 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .rouble {
   font-family: $ff-rouble;
   /* stylelint-disable */

@@ -1,0 +1,11 @@
+.social {
+  display: flex;
+}
+
+.social__item {
+  margin-right: 11px;
+
+  &:last-child {
+    margin-right: 11px;
+  }
+}
