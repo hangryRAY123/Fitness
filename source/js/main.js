@@ -1,12 +1,15 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {initTabs} from './modules/tabs/init-tabs';
 import {Form} from './modules/form-validate/form';
 import {lazySizes} from './vendor/lazysizes';
+import {ItcSlider} from './vendor/itc-slider';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
   const picture = document.querySelectorAll('[data-validate="picture"]');
+  const slider = document.querySelectorAll('.itc-slider');
 
   picture.forEach((e) => {
     e.style.display = 'block';
@@ -24,10 +27,14 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    initTabs();
     const form = new Form();
     window.form = form;
     form.init();
     lazySizes();
+    slider.forEach((el) => {
+      ItcSlider.getOrCreateInstance(el);
+    });
   });
 });
 

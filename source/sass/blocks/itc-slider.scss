@@ -26,34 +26,38 @@
 }
 
 .itc-slider__item {
-  flex: 0 0 260px;
-  max-width: 260px;
+  flex: 0 0 300px;
+  max-width: 300px;
   user-select: none;
   will-change: transform;
-  margin-right: 40px;
+  padding-right: 40px;
 
   &--reviews {
     flex: 0 0 100%;
     max-width: 100%;
-    margin-right: 0;
+    padding-right: 0;
   }
 
   @include vp-1199 {
-    flex: 0 0 47.5%;
-    max-width: 47.5%;
-    margin-right: 5%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    min-width: 298px;
+    padding-right: 30px;
 
     &--reviews {
       flex: 0 0 100%;
       max-width: 100%;
-      margin-right: 0;
+      min-width: 1%;
+      padding-right: 0;
     }
   }
 
   @include vp-767 {
     flex: 0 0 100%;
     max-width: 100%;
+    min-width: 226px;
     margin-right: 0;
+    padding-right: 0;
   }
 }
 
@@ -68,7 +72,7 @@
   height: 50px;
   color: #fff;
   text-align: center;
-  background: rgb(0 0 0 / 20%);
+  background-color: transparent;
   border: none;
   transform: translateY(-50%);
   cursor: pointer;
@@ -79,19 +83,33 @@
 }
 
 .itc-slider__btn_prev {
-  left: 0;
+  left: -40px;
+
+  @include vp-1199 {
+    left: -60px;
+  }
+
+  @include vp-767 {
+    left: -40px;
+  }
 }
 
 .itc-slider__btn_next {
-  right: 0;
+  right: -40px;
+
+  @include vp-1199 {
+    right: -30px;
+  }
+
+  @include vp-767 {
+    right: -40px;
+  }
 }
 
 .itc-slider__btn:hover,
 .itc-slider__btn:focus {
   color: #fff;
   text-decoration: none;
-  background: rgb(0 0 0 / 30%);
-  outline: 0;
 }
 
 .itc-slider__btn::before {

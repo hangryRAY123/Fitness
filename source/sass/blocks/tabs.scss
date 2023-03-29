@@ -1,8 +1,8 @@
 .tabs {
   display: flex;
   flex-direction: column;
-  align-items: center;
   z-index: 1;
+  width: 100%;
 
   @include vp-767 {
     width: 100%;
@@ -14,6 +14,7 @@
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
   padding-bottom: 20px;
   margin-bottom: 39px;
+  align-self: center;
 
   @include vp-1199 {
     margin-bottom: 45px;
@@ -35,6 +36,21 @@
   border: none;
   background-color: transparent;
   margin-right: 46px;
+  position: relative;
+
+  &.is-active {
+    color: $color-dark;
+  }
+
+  &.is-active::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #d10a42;
+    left: 0;
+    bottom: -22px;
+  }
 
   @include vp-1199 {
     font-size: 18px;
@@ -54,6 +70,12 @@
 }
 
 .tabs__content {
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.tabs__element {
   @include vp-767 {
     width: 100%;
   }
@@ -81,6 +103,7 @@
   background-color: $color-default-white;
   padding: 68px 77px;
   min-width: 360px;
+  z-index: 1;
 
   &::before {
     display: none;
@@ -91,13 +114,18 @@
     width: 100%;
     height: 100%;
     border: 7px solid #00359f;
-    border-image: linear-gradient(#d10a42 0, #00359f 100%);
+    border-image: linear-gradient(135deg, #d10a42 0, #00359f 100%);
     border-image-slice: 1;
-    z-index: 0;
+    z-index: -1;
   }
 
   &:hover::before {
     display: block;
+  }
+
+  &:hover a {
+    background: linear-gradient(90deg, #d10a42 0, #00359f 100%);
+    color: $color-default-white;
   }
 
   @include vp-1199 {
@@ -150,7 +178,9 @@
 
   &::before {
     position: absolute;
-    content: "";
+    content: attr(data-price);
+    font-family: "Roboto Condensed", "Tahoma", sans-serif;
+    font-weight: 700;
     font-size: 100px;
     line-height: 150px;
     color: #e8e8e8;
@@ -183,16 +213,4 @@
 .tabs__item a {
   color: $color-dark;
   border: 2px solid $color-dark;
-}
-
-.tabs__item--coach p::before {
-  content: "5000";
-}
-
-.tabs__item--day p::before {
-  content: "1700";
-}
-
-.tabs__item--full p::before {
-  content: "2700";
 }

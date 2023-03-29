@@ -18,11 +18,10 @@
   flex-direction: column;
   margin-left: auto;
   margin-right: 170px;
-  min-width: 410px;
+  width: 410px;
 
   @include vp-1199 {
     width: 100%;
-    min-width: 1%;
     margin-right: 163px;
     margin-left: 133px;
   }
@@ -60,6 +59,10 @@
   column-gap: 30px;
 }
 
+.free-lesson__form div {
+  position: relative;
+}
+
 .free-lesson__form input {
   font-family: "Roboto Condensed", "Tahoma", sans-serif;
   font-weight: 400;
@@ -71,6 +74,8 @@
   background-color: transparent;
   width: 100%;
   padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
   border-bottom: 1px solid #74819c;
   margin-bottom: 30px;
 }
@@ -88,4 +93,18 @@
   font-size: 14px;
   line-height: 16px;
   border-width: 3px;
+}
+
+.free-lesson__message {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.is-valid .free-lesson__message {
+  color: #15ab07;
 }

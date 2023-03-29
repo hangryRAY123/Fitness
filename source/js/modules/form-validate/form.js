@@ -40,7 +40,7 @@ export class Form {
     form.reset();
     form.querySelectorAll('.is-invalid').forEach((item) => item.classList.remove('is-invalid'));
     form.querySelectorAll('.is-valid').forEach((item) => item.classList.remove('is-valid'));
-    form.querySelectorAll('.input-message').forEach((item) => item.remove());
+    form.querySelectorAll('.free-lesson__message').forEach((item) => item.remove());
     setTimeout(() => {
       this._resetSelects(form);
     });
@@ -91,7 +91,6 @@ export class Form {
     form.noValidate = true;
 
     form.addEventListener('submit', (event) => {
-      event.preventDefault();
       this._onFormSubmit(event, callback);
     });
 

@@ -20,7 +20,8 @@
   flex-direction: column;
 
   @include vp-1199 {
-    padding: 0 55px;
+    padding-left: 55px;
+    padding-right: 25px;
   }
 
   @include vp-767 {
