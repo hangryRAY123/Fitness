@@ -1425,7 +1425,7 @@ button,
   padding-bottom: 5px;
 }
 
-.promo__item b {
+.promo__item time {
   font-family: "Roboto Condensed", "Tahoma", sans-serif;
   font-weight: 700;
   font-size: 40px;
@@ -2708,7 +2708,7 @@ button,
     padding-bottom: 3px;
   }
 
-  .promo__item b {
+  .promo__item time {
     font-size: 24px;
     line-height: 26px;
   }
