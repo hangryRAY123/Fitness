@@ -10,8 +10,43 @@
     Групповые занятия
     Кардио-зона "
     />
-    <title>Фитнес-центр</title>
+    <title>SUPERGYM</title>
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="icon" href="img/favicons/favicon-16x16.png" type="image/png" />
+    <link rel="icon" href="img/favicons/favicon-16x16.webp" type="image/webp" />
+    <link rel="icon" href="img/favicons/favicon-32x32.png" type="image/png" />
+    <link rel="icon" href="img/favicons/favicon-32x32.webp" type="image/webp" />
+    <link
+      rel="apple-touch-icon"
+      href="img/favicons/favicon-152x152.png"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="img/favicons/favicon-152x152.webp"
+      type="image/webp"
+    />
+    <link
+      rel="preload"
+      href="fonts/AlumniSans-SemiBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/Roboto-Condensed.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/RobotoCondensed-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div class="wrapper">
@@ -278,10 +313,10 @@
                 class="lazyload"
                 width="364"
                 height="228"
-                poster="img/gym/video-desktop.webp"
+                poster="img/video/video-mobile.jpg"
                 controls
               >
-                <source src="img/video.mp4" type="video/mp4" />
+                <source src="img/video/video.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -320,7 +355,10 @@
                     12 месяцев
                   </button>
                 </div>
-                <div class="tabs__content" data-tabs="content">
+                <div
+                  class="tabs__content tabs__content--nojs"
+                  data-tabs="content"
+                >
                   <div class="tabs__element" data-tabs="element">
                     <ul class="tabs__list">
                       <li class="tabs__item">
@@ -549,7 +587,7 @@
                 <div class="itc-slider__wrapper">
                   <div class="itc-slider__items">
                     <div class="itc-slider__item">
-                      <div class="coaches__item">
+                      <div class="coaches__item" tabindex="0">
                         <figure>
                           <picture data-validate="picture">
                             <source
@@ -682,7 +720,7 @@
                       </div>
                     </div>
                     <div class="itc-slider__item">
-                      <div class="coaches__item">
+                      <div class="coaches__item" tabindex="0">
                         <figure>
                           <picture data-validate="picture">
                             <source
@@ -815,7 +853,7 @@
                       </div>
                     </div>
                     <div class="itc-slider__item">
-                      <div class="coaches__item">
+                      <div class="coaches__item" tabindex="0">
                         <figure>
                           <picture data-validate="picture">
                             <source
@@ -948,7 +986,7 @@
                       </div>
                     </div>
                     <div class="itc-slider__item">
-                      <div class="coaches__item">
+                      <div class="coaches__item" tabindex="0">
                         <figure>
                           <picture data-validate="picture">
                             <source
@@ -1081,7 +1119,7 @@
                       </div>
                     </div>
                     <div class="itc-slider__item">
-                      <div class="coaches__item">
+                      <div class="coaches__item" tabindex="0">
                         <figure>
                           <picture data-validate="picture">
                             <source
@@ -1214,7 +1252,7 @@
                       </div>
                     </div>
                     <div class="itc-slider__item">
-                      <div class="coaches__item">
+                      <div class="coaches__item" tabindex="0">
                         <figure>
                           <picture data-validate="picture">
                             <source
@@ -1347,7 +1385,7 @@
                       </div>
                     </div>
                     <div class="itc-slider__item">
-                      <div class="coaches__item">
+                      <div class="coaches__item" tabindex="0">
                         <figure>
                           <picture data-validate="picture">
                             <source
@@ -1480,7 +1518,7 @@
                       </div>
                     </div>
                     <div class="itc-slider__item">
-                      <div class="coaches__item">
+                      <div class="coaches__item" tabindex="0">
                         <figure>
                           <picture data-validate="picture">
                             <source
@@ -1614,8 +1652,18 @@
                     </div>
                   </div>
                 </div>
-                <button class="itc-slider__btn itc-slider__btn_prev"></button>
-                <button class="itc-slider__btn itc-slider__btn_next"></button>
+                <button
+                  class="itc-slider__btn itc-slider__btn_prev"
+                  type="button"
+                >
+                  <span class="visually-hidden">Предыдущий слайд.</span>
+                </button>
+                <button
+                  class="itc-slider__btn itc-slider__btn_next"
+                  type="button"
+                >
+                  <span class="visually-hidden">Слудующий слайд.</span>
+                </button>
               </div>
             </div>
           </div>
@@ -1828,7 +1876,11 @@
           <div class="container">
             <div class="reviews__wrapper">
               <h2>Отзывы</h2>
-              <div class="itc-slider" data-slider="itc-slider" data-loop="false">
+              <div
+                class="itc-slider"
+                data-slider="itc-slider"
+                data-loop="false"
+              >
                 <div class="itc-slider__wrapper">
                   <div class="itc-slider__items">
                     <div class="itc-slider__item itc-slider__item--reviews">
@@ -2015,10 +2067,112 @@
                         </p>
                       </div>
                     </div>
+                    <div class="itc-slider__item itc-slider__item--reviews">
+                      <div class="reviews__item">
+                        <picture data-validate="picture">
+                          <source
+                            media="(max-width: 767px)"
+                            type="image/webp"
+                            data-srcset="
+                              img/reviews/reviews-mobile.webp    1x,
+                              img/reviews/reviews-mobile@2x.webp 2x
+                            "
+                            srcset="
+                              data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=
+                            "
+                          />
+                          <source
+                            media="(max-width: 767px)"
+                            data-srcset="
+                              img/reviews/reviews-mobile.png    1x,
+                              img/reviews/reviews-mobile@2x.png 2x
+                            "
+                            srcset="
+                              data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=
+                            "
+                          />
+                          <source
+                            type="image/webp"
+                            data-srcset="
+                              img/reviews/reviews-tablet.webp    1x,
+                              img/reviews/reviews-tablet@2x.webp 2x
+                            "
+                            srcset="
+                              data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=
+                            "
+                          />
+                          <img
+                            class="lazyload"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                            data-src="img/reviews/reviews-tablet.png"
+                            data-srcset="
+                              img/reviews/reviews-tablet.png    1x,
+                              img/reviews/reviews-tablet@2x.png 2x
+                            "
+                            width="80"
+                            height="80"
+                            alt="Клиент клуба."
+                          />
+                        </picture>
+                        <noscript
+                          ><picture>
+                            <source
+                              media="(max-width: 767px)"
+                              type="image/webp"
+                              srcset="
+                                img/reviews/reviews-mobile.webp    1x,
+                                img/reviews/reviews-mobile@2x.webp 2x
+                              "
+                            />
+                            <source
+                              media="(max-width: 767px)"
+                              srcset="
+                                img/reviews/reviews-mobile.png    1x,
+                                img/reviews/reviews-mobile@2x.png 2x
+                              "
+                            />
+                            <source
+                              type="image/webp"
+                              srcset="
+                                img/reviews/reviews-tablet.webp    1x,
+                                img/reviews/reviews-tablet@2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="img/reviews/reviews-tablet.png"
+                              srcset="
+                                img/reviews/reviews-tablet.png    1x,
+                                img/reviews/reviews-tablet@2x.png 2x
+                              "
+                              width="80"
+                              height="80"
+                              alt="Клиент клуба."
+                            />
+                          </picture>
+                        </noscript>
+                        <h3>Анна Орлова</h3>
+                        <p>
+                          &laquo;Хожу в&nbsp;SuperClub уже больше года.
+                          Нравится, что в&nbsp;клубе всегда чисто, тренажеры
+                          обновляют, персонал дружелюбный. Зал просторный, даже
+                          в&nbsp;вечернее время нет очередей&raquo;
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <button class="itc-slider__btn itc-slider__btn_prev"></button>
-                <button class="itc-slider__btn itc-slider__btn_next"></button>
+                <button
+                  class="itc-slider__btn itc-slider__btn_prev itc-slider__btn_prev--reviews"
+                  type="button"
+                >
+                  <span class="visually-hidden">Предыдущий слайд.</span>
+                </button>
+                <button
+                  class="itc-slider__btn itc-slider__btn_next itc-slider__btn_next--reviews"
+                  type="button"
+                >
+                  <span class="visually-hidden">Слудующий слайд.</span>
+                </button>
               </div>
             </div>
           </div>

@@ -10,7 +10,7 @@
   }
 
   @include vp-767 {
-    padding-top: 35px;
+    padding-top: 30px;
     padding-bottom: 70px;
   }
 }
@@ -35,23 +35,46 @@
   font-size: 54px;
   line-height: 65px;
   margin-bottom: 48px;
+  letter-spacing: 2px;
 
   @include vp-1199 {
     font-size: 42px;
     line-height: 50px;
     margin-bottom: 31px;
     align-self: center;
+    margin-right: 34px;
+    letter-spacing: 1.7px;
   }
 
   @include vp-767 {
     font-size: 32px;
     line-height: 38px;
-    margin-bottom: 50px;
+    margin-right: 5px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
   }
 }
 
 .coaches__item {
   position: relative;
+
+  &:hover .coaches__description {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @include vp-1199 {
+    &:hover .coaches__description {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &:active .coaches__description,
+    &:focus .coaches__description {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 }
 
 .coaches__item img {
@@ -75,22 +98,27 @@
 }
 
 .coaches__description {
-  display: none;
+  display: block;
+  flex-direction: column;
   position: absolute;
+  align-items: center;
   background-color: rgba(16, 38, 84, 0.89);
   color: $color-default-white;
-  padding: 57px;
+  padding: 52px 47px;
   top: 0;
   width: 100%;
   height: 100%;
   overflow-y: overlay;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
 
   @include vp-1199 {
-    padding: 58px;
+    padding: 52px 50px;
   }
 
   @include vp-767 {
-    padding: 48px 40px;
+    padding: 43px 30px;
   }
 }
 
@@ -99,6 +127,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 27px;
+  text-align: center;
 }
 
 .coaches__description span {
@@ -106,15 +135,16 @@
   font-family: "Roboto Condensed", "Tahoma", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 18px;
   color: #b6bdcc;
-  margin-bottom: 45px;
+  margin-bottom: 35px;
+  text-align: center;
 }
 
 .coaches__description ul {
   display: flex;
   flex-direction: column;
-  list-style-type: disc;
+  padding-left: 22px;
 }
 
 .coaches__description li {
@@ -122,7 +152,19 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  margin-bottom: 24px;
+  margin-bottom: 13px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $color-default-white;
+    top: 7px;
+    left: -15px;
+  }
 
   &:last-child {
     margin-bottom: 0;

@@ -1,16 +1,25 @@
 .nav {
   @include vp-767 {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
 }
 
 .nav__list {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+  margin-left: 8px;
+
+  @include vp-1199 {
+    max-width: 420px;
+    margin-left: 10px;
+  }
 
   @include vp-767 {
     display: block;
     column-count: 2;
-    column-gap: 70px;
+    column-gap: 75px;
+    margin-left: 0;
   }
 }
 
@@ -23,10 +32,10 @@
 
   @include vp-767 {
     margin-right: 0;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 
     &:first-child {
-      margin-top: 50px;
+      margin-top: 40px;
     }
   }
 
@@ -42,6 +51,11 @@
   font-size: 14px;
   line-height: 16px;
   color: $color-default-white;
+  padding: 5px 0;
+
+  @include vp-1199 {
+    padding: 3px 0;
+  }
 
   @include vp-767 {
     font-size: 16px;

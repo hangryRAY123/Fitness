@@ -76,6 +76,11 @@
   border: none;
   transform: translateY(-50%);
   cursor: pointer;
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.5;
+  }
 }
 
 .itc-slider__btn_hide {
@@ -83,26 +88,30 @@
 }
 
 .itc-slider__btn_prev {
-  left: -40px;
+  left: -70px;
 
   @include vp-1199 {
-    left: -60px;
+    left: -70px;
   }
 
   @include vp-767 {
-    left: -40px;
+    left: -45px;
   }
 }
 
 .itc-slider__btn_next {
-  right: -40px;
+  right: -70px;
 
   @include vp-1199 {
-    right: -30px;
+    right: -40px;
+
+    &--reviews {
+      right: -70px;
+    }
   }
 
   @include vp-767 {
-    right: -40px;
+    right: -45px;
   }
 }
 

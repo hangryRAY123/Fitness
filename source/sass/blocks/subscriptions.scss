@@ -10,7 +10,7 @@
   }
 
   @include vp-767 {
-    padding-top: 70px;
+    padding-top: 65px;
     padding-bottom: 70px;
   }
 }
@@ -26,8 +26,8 @@
     content: "";
     width: 376px;
     height: 330px;
-    top: 560px;
-    right: -20%;
+    top: 470px;
+    right: -20.5%;
     background-image: image-set(
       url("../img/subscriptions/subscriptions-desktop.webp") 1x,
       url("../img/subscriptions/subscriptions-desktop.png") 1x
@@ -46,7 +46,7 @@
     @include vp-1199 {
       width: 340px;
       height: 297px;
-      top: 1680px;
+      top: 1435px;
       right: -45%;
       background-image: image-set(
         url("../img/subscriptions/subscriptions-tablet.webp") 1x,
@@ -81,16 +81,21 @@
   font-weight: 600;
   font-size: 54px;
   line-height: 65px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
 
   @include vp-1199 {
     font-size: 42px;
     line-height: 50px;
+    letter-spacing: 1.5px;
+    margin-right: 10px;
+    margin-bottom: 20px;
   }
 
   @include vp-767 {
     font-size: 32px;
     line-height: 38px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
   }
 }

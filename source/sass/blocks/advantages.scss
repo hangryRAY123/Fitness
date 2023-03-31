@@ -2,15 +2,15 @@
   background-color: #f8f9fc;
   color: $color-dark;
   padding-top: 146px;
-  padding-bottom: 91px;
+  padding-bottom: 85px;
 
   @include vp-1199 {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
 
   @include vp-767 {
-    padding-top: 70px;
+    padding-top: 60px;
     padding-bottom: 70px;
   }
 }
@@ -25,6 +25,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 80px;
+  padding-right: 60px;
+
+  @include vp-1199 {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .advantages__wrapper h2 {
@@ -32,18 +39,22 @@
   font-weight: 600;
   font-size: 54px;
   line-height: 65px;
-  margin-bottom: 55px;
+  margin-bottom: 45px;
+  letter-spacing: 1px;
+  margin-right: 20px;
 
   @include vp-1199 {
     font-size: 42px;
     line-height: 50px;
-    margin-bottom: 60px;
+    margin-bottom: 45px;
+    margin-right: 23px;
   }
 
   @include vp-767 {
     font-size: 32px;
     line-height: 38px;
-    margin-bottom: 60px;
+    margin-bottom: 45px;
+    margin-right: 20px;
   }
 }
 
@@ -51,15 +62,18 @@
   display: grid;
   grid-template-columns: repeat(3, auto);
   column-gap: 60px;
-  row-gap: 50px;
+  row-gap: 148px;
 
   @include vp-1199 {
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 45px;
+    column-gap: 30px;
   }
 
   @include vp-767 {
     width: 100%;
     grid-template-columns: 1fr;
+    row-gap: 35px;
   }
 }
 
@@ -69,6 +83,7 @@
   @include vp-767 {
     flex-direction: column;
     align-items: center;
+    padding: 0 45px;
   }
 }
 
@@ -86,7 +101,7 @@
   font-family: "Roboto Condensed", "Tahoma", sans-serif;
   font-weight: 700;
   font-size: 71px;
-  line-height: 106px;
+  line-height: 71px;
   background: linear-gradient(#d10a42 0, #0041ca 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -96,7 +111,7 @@
     font-family: "Roboto Condensed", "Tahoma", sans-serif;
     font-weight: 700;
     font-size: 58px;
-    line-height: 87px;
+    line-height: 58px;
   }
 
   @include vp-767 {
@@ -112,6 +127,11 @@
   background: linear-gradient(#d10a42 0, #0041ca 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-top: -5px;
+
+  @include vp-767 {
+    margin-bottom: 5px;
+  }
 }
 
 .advantages__item h3 {
@@ -119,10 +139,18 @@
   font-weight: 700;
   font-size: 22px;
   line-height: 33px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 
   @include vp-1199 {
     font-size: 20px;
     line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    margin-bottom: 3px;
   }
 }
 
@@ -145,9 +173,10 @@
   align-items: center;
   grid-column: 2;
   grid-row: 1/3;
-  padding: 65px 34px;
+  padding: 55px 34px 55px 28px;
   max-width: 240px;
   justify-self: center;
+  margin-top: 10px;
 
   &::before {
     position: absolute;
@@ -155,8 +184,8 @@
     width: 340px;
     height: 2px;
     background-color: rgba(209, 10, 66, 0.2);
-    top: 50%;
-    left: -170%;
+    top: 49%;
+    left: -167%;
 
     @include vp-1199 {
       display: none;
@@ -169,8 +198,8 @@
     width: 340px;
     height: 2px;
     background-color: rgba(209, 10, 66, 0.2);
-    top: 50%;
-    left: 150%;
+    top: 49%;
+    left: 124%;
 
     @include vp-1199 {
       display: none;
@@ -182,6 +211,8 @@
     grid-row: 2;
     max-width: 442px;
     justify-self: center;
+    padding: 30px 135px 35px 135px;
+    margin-top: 0;
   }
 
   @include vp-767 {
@@ -189,25 +220,41 @@
     grid-column: auto;
     grid-row: auto;
     justify-self: auto;
+    padding: 35px 70px 50px 70px;
+    margin-top: 10px;
   }
 }
 
 .advantages__item--center b {
   display: block;
   font-size: 74px;
-  line-height: 111px;
+  line-height: 74px;
   background: none;
   -webkit-text-fill-color: #ffffff;
   margin-right: 0;
+
+  @include vp-1199 {
+    font-size: 76px;
+    line-height: 76px;
+  }
 }
 
 .advantages__item--center h3 {
   font-size: 26px;
   line-height: 39px;
+  margin-bottom: 32px;
+  margin-top: 3px;
 
   @include vp-1199 {
     font-size: 22px;
     line-height: 33px;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  @include vp-767 {
+    margin-top: -5px;
+    margin-bottom: 8px;
   }
 }
 

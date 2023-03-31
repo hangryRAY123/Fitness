@@ -5,12 +5,12 @@
   padding-bottom: 60px;
 
   @include vp-1199 {
-    padding-top: 100px;
+    padding-top: 95px;
     padding-bottom: 50px;
   }
 
   @include vp-767 {
-    padding-top: 70px;
+    padding-top: 60px;
     padding-bottom: 35px;
   }
 }
@@ -22,17 +22,20 @@
   line-height: 65px;
   margin-bottom: 34px;
   text-align: center;
+  letter-spacing: 1.5px;
 
   @include vp-1199 {
     font-size: 42px;
     line-height: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    margin-right: 10px;
   }
 
   @include vp-767 {
     font-size: 32px;
     line-height: 38px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    margin-right: 5px;
   }
 }
 
@@ -50,6 +53,10 @@
 .promotions__inner {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  @include vp-1199 {
+    grid-template-columns: 41% 59%;
+  }
 
   @include vp-767 {
     grid-template-columns: 1fr;
@@ -69,8 +76,14 @@
   color: $color-default-white;
   padding: 45px;
 
+  @include vp-1199 {
+    padding: 45px 40px 45px 45px;
+  }
+
   @include vp-767 {
     align-items: center;
+    max-width: 100%;
+    padding: 45px 40px 45px 45px;
   }
 }
 
@@ -79,8 +92,8 @@
   font-family: "Roboto Condensed", "Tahoma", sans-serif;
   font-weight: 700;
   font-size: 28px;
-  line-height: 44px;
-  margin-bottom: 19px;
+  line-height: 28px;
+  margin-bottom: 0;
 }
 
 .promotions__box b {
@@ -88,7 +101,12 @@
   font-family: "Roboto Condensed", "Tahoma", sans-serif;
   font-weight: 700;
   font-size: 70px;
-  line-height: 109px;
+  line-height: 70px;
+  margin-bottom: 20px;
+
+  @include vp-767 {
+    margin-bottom: 15px;
+  }
 }
 
 .promotions__box p {
@@ -96,6 +114,11 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
+
+  @include vp-767 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
 }
 
 .promotions__box a {
@@ -108,9 +131,11 @@
   text-transform: uppercase;
   align-self: flex-start;
   margin-top: auto;
+  letter-spacing: 0.5px;
 
   @include vp-767 {
     align-self: center;
+    letter-spacing: 1px;
   }
 }
 
@@ -152,8 +177,13 @@
     z-index: -1;
   }
 
+  @include vp-1199 {
+    min-height: 211px;
+    padding-top: 30px;
+  }
+
   @include vp-767 {
-    padding: 46px 50px;
+    padding: 40px 40px 45px 40px;
     align-items: center;
   }
 }
@@ -163,6 +193,12 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 26px;
+  margin-bottom: 10px;
+
+  @include vp-767 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
 }
 
 .promotions__item p {
@@ -170,13 +206,17 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+
+  @include vp-767 {
+    text-align: center;
+  }
 }
 
 .promotions__item a {
   font-family: "Roboto Condensed", "Tahoma", sans-serif;
   font-weight: 700;
   font-size: 12px;
-  line-height: 24px;
+  line-height: 12px;
   color: #1c3374;
   border-bottom: 1px solid #1c3374;
   text-transform: uppercase;
@@ -185,5 +225,6 @@
 
   @include vp-767 {
     align-self: center;
+    letter-spacing: 1px;
   }
 }

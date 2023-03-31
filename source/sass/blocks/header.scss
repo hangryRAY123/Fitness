@@ -4,6 +4,14 @@
   color: $color-default-white;
   background-color: transparent;
   align-items: center;
+
+  @include vp-1199 {
+    margin-bottom: 20px;
+  }
+
+  @include retina {
+    margin-bottom: 0;
+  }
 }
 
 .header img {
@@ -21,7 +29,9 @@
 .header__list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 142px;
+  max-width: 160px;
+  justify-content: end;
+  align-self: flex-start;
 }
 
 .header__link {
@@ -30,11 +40,13 @@
   font-size: 26px;
   line-height: 31px;
   color: $color-default-white;
+  letter-spacing: 1px;
 
   @include vp-1199 {
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
+    letter-spacing: 0.5px;
   }
 
   @include vp-767 {

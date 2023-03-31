@@ -5,7 +5,7 @@
   line-height: 14px;
   text-transform: uppercase;
   display: flex;
-  padding: 24px 0;
+  padding: 18px 0;
   width: 100%;
   color: $color-default-white;
   background-color: transparent;
@@ -16,12 +16,12 @@
   transition: opacity $trans-default;
 
   &:disabled {
-    opacity: 0.5;
+    opacity: 0.4;
 
     pointer-events: none;
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    opacity: 0.5;
   }
 }
