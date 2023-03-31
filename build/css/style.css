@@ -1425,7 +1425,7 @@ button,
   padding-bottom: 5px;
 }
 
-.promo__item b {
+.promo__item time {
   font-family: "Roboto Condensed", "Tahoma", sans-serif;
   font-weight: 700;
   font-size: 40px;
@@ -1657,7 +1657,7 @@ button,
   align-items: center;
   width: 40px;
   height: 50px;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   background-color: transparent;
   border: none;
@@ -1688,7 +1688,7 @@ button,
 
 .itc-slider__btn:hover,
 .itc-slider__btn:focus {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -2559,7 +2559,6 @@ button,
   }
 
   .entry__inner a {
-    padding-top: 18px;
     letter-spacing: 0.5px;
     max-width: 100%;
     padding: 19px 0;
@@ -2709,7 +2708,7 @@ button,
     padding-bottom: 3px;
   }
 
-  .promo__item b {
+  .promo__item time {
     font-size: 24px;
     line-height: 26px;
   }
