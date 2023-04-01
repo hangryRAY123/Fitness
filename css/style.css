@@ -984,7 +984,7 @@ button,
   background-color: #ffffff;
   color: #102654;
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 238px;
 }
 
 .gym__wrapper {
@@ -995,6 +995,11 @@ button,
   flex-wrap: wrap;
 }
 
+.gym__wrapper picture {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
 .gym__wrapper img {
   width: 100%;
   height: 100%;
@@ -1003,9 +1008,9 @@ button,
 }
 
 .gym__wrapper video {
-  margin-right: 62.5%;
-  margin-left: 37.5%;
-  margin-top: -110px;
+  position: absolute;
+  left: 38%;
+  top: 290px;
   cursor: pointer;
   width: 364px;
   height: 228px;
@@ -1116,6 +1121,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
   padding-bottom: 12px;
   margin-bottom: 39px;
@@ -1387,6 +1394,7 @@ button,
   align-self: flex-end;
   padding: 23px 0;
   letter-spacing: 1px;
+  margin-top: 10px;
 }
 
 .promo__list {
@@ -1797,9 +1805,10 @@ button,
 }
 
 .advantages__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+  grid-template-columns: repeat(2, auto);
 }
 
 .advantages__item div {
@@ -1818,9 +1827,8 @@ button,
   font-weight: 700;
   font-size: 71px;
   line-height: 71px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d10a42), to(#0041ca));
-  background: -o-linear-gradient(#d10a42 0, #0041ca 100%);
-  background: linear-gradient(#d10a42 0, #0041ca 100%);
+  background: -o-linear-gradient(315deg, #d10a42 0, #0041ca 100%);
+  background: linear-gradient(135deg, #d10a42 0, #0041ca 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1832,9 +1840,8 @@ button,
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d10a42), to(#0041ca));
-  background: -o-linear-gradient(#d10a42 0, #0041ca 100%);
-  background: linear-gradient(#d10a42 0, #0041ca 100%);
+  background: -o-linear-gradient(315deg, #d10a42 0, #0041ca 100%);
+  background: linear-gradient(135deg, #d10a42 0, #0041ca 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1858,6 +1865,9 @@ button,
 }
 
 .advantages__item--center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   background-color: #1c3374;
   color: #ffffff;
@@ -1875,9 +1885,13 @@ button,
   grid-row: 1/3;
   padding: 55px 34px 55px 28px;
   max-width: 240px;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   -ms-grid-column-align: center;
   justify-self: center;
-  margin-top: 10px;
 }
 
 .advantages__item--center::before {
@@ -1886,7 +1900,7 @@ button,
   width: 340px;
   height: 2px;
   background-color: rgba(209, 10, 66, 0.2);
-  top: 49%;
+  top: 50%;
   left: -167%;
 }
 
@@ -1896,7 +1910,7 @@ button,
   width: 340px;
   height: 2px;
   background-color: rgba(209, 10, 66, 0.2);
-  top: 49%;
+  top: 50%;
   left: 124%;
 }
 
@@ -1935,7 +1949,7 @@ button,
   font-weight: 600;
   font-size: 54px;
   line-height: 65px;
-  margin-bottom: 34px;
+  margin-bottom: 35px;
   text-align: center;
   letter-spacing: 1.5px;
 }
@@ -2000,6 +2014,7 @@ button,
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
+  margin-bottom: 20px;
 }
 
 .promotions__box a {
@@ -2066,6 +2081,7 @@ button,
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+  margin-bottom: 20px;
 }
 
 .promotions__item a {
@@ -2109,6 +2125,7 @@ button,
   -ms-grid-row-align: center;
   align-self: center;
   letter-spacing: 1px;
+  margin-left: 5px;
 }
 
 .reviews__item {
@@ -2561,7 +2578,7 @@ button,
   .entry__inner a {
     letter-spacing: 0.5px;
     max-width: 100%;
-    padding: 19px 0;
+    padding: 18px 0;
   }
 
   .gym {
@@ -2578,7 +2595,14 @@ button,
     flex-wrap: nowrap;
   }
 
+  .gym__wrapper picture {
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
+    align-self: stretch;
+  }
+
   .gym__wrapper video {
+    position: static;
     width: 266px;
     height: 167px;
     margin: 0 auto;
@@ -2632,7 +2656,6 @@ button,
   }
 
   .subscriptions__wrapper {
-    width: 442px;
     margin: 0 auto;
   }
 
@@ -2652,6 +2675,11 @@ button,
     font-size: 18px;
     line-height: 27px;
     margin-right: 54px;
+  }
+
+  .tabs__content {
+    width: 442px;
+    margin: 0 auto;
   }
 
   .tabs__list {
@@ -2811,6 +2839,17 @@ button,
     column-gap: 30px;
   }
 
+  .advantages__item {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .advantages__item div {
+    -ms-grid-column-align: start;
+    justify-self: start;
+  }
+
   .advantages__item b {
     font-family: "Roboto Condensed", "Tahoma", sans-serif;
     font-weight: 700;
@@ -2842,6 +2881,7 @@ button,
     justify-self: center;
     padding: 30px 135px 35px 135px;
     margin-top: 0;
+    margin-bottom: 0;
   }
 
   .advantages__item--center b {
@@ -2897,7 +2937,7 @@ button,
   }
 
   .reviews {
-    padding-top: 45px;
+    padding-top: 42px;
     padding-bottom: 100px;
   }
 
@@ -2909,6 +2949,7 @@ button,
     font-size: 42px;
     line-height: 50px;
     margin-bottom: 40px;
+    margin-left: 0;
   }
 
   .reviews__item {
@@ -2917,7 +2958,7 @@ button,
   }
 
   .free-lesson {
-    padding-top: 60px;
+    padding-top: 63px;
     padding-bottom: 65px;
   }
 
@@ -2950,7 +2991,7 @@ button,
   }
 
   .contacts {
-    padding-top: 65px;
+    padding-top: 63px;
     padding-bottom: 55px;
   }
 
@@ -3241,6 +3282,10 @@ button,
     margin-bottom: 30px;
   }
 
+  .promo__inner a {
+    margin-top: 0;
+  }
+
   .coaches {
     padding-top: 30px;
     padding-bottom: 70px;
@@ -3309,13 +3354,14 @@ button,
   }
 
   .advantages__item {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     padding: 0 45px;
   }
 
@@ -3323,6 +3369,8 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -ms-grid-column-align: center;
+    justify-self: center;
   }
 
   .advantages__item b {
