@@ -78,11 +78,17 @@
 }
 
 .advantages__item {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+
+  @include vp-1199 {
+    justify-content: flex-start;
+  }
 
   @include vp-767 {
-    flex-direction: column;
+    grid-template-columns: auto;
     align-items: center;
+    justify-content: center;
     padding: 0 45px;
   }
 }
@@ -91,8 +97,13 @@
   display: flex;
   flex-direction: column;
 
+  @include vp-1199 {
+    justify-self: start;
+  }
+
   @include vp-767 {
     align-items: center;
+    justify-self: center;
   }
 }
 
@@ -102,7 +113,7 @@
   font-weight: 700;
   font-size: 71px;
   line-height: 71px;
-  background: linear-gradient(#d10a42 0, #0041ca 100%);
+  background: linear-gradient(135deg, #d10a42 0, #0041ca 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-right: 30px;
@@ -124,7 +135,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  background: linear-gradient(#d10a42 0, #0041ca 100%);
+  background: linear-gradient(135deg, #d10a42 0, #0041ca 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: -5px;
@@ -166,6 +177,7 @@
 }
 
 .advantages__item--center {
+  display: flex;
   position: relative;
   background-color: #1c3374;
   color: $color-default-white;
@@ -175,8 +187,10 @@
   grid-row: 1/3;
   padding: 55px 34px 55px 28px;
   max-width: 240px;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: max-content;
   justify-self: center;
-  margin-top: 10px;
 
   &::before {
     position: absolute;
@@ -184,7 +198,7 @@
     width: 340px;
     height: 2px;
     background-color: rgba(209, 10, 66, 0.2);
-    top: 49%;
+    top: 50%;
     left: -167%;
 
     @include vp-1199 {
@@ -198,7 +212,7 @@
     width: 340px;
     height: 2px;
     background-color: rgba(209, 10, 66, 0.2);
-    top: 49%;
+    top: 50%;
     left: 124%;
 
     @include vp-1199 {
@@ -213,6 +227,7 @@
     justify-self: center;
     padding: 30px 135px 35px 135px;
     margin-top: 0;
+    margin-bottom: 0;
   }
 
   @include vp-767 {

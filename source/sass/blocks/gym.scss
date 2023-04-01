@@ -2,7 +2,7 @@
   background-color: $color-default-white;
   color: $color-dark;
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 238px;
 
   @include vp-1199 {
     padding-top: 100px;
@@ -25,6 +25,14 @@
   }
 }
 
+.gym__wrapper picture {
+  align-self: flex-start;
+
+  @include vp-1199 {
+    align-self: stretch;
+  }
+}
+
 .gym__wrapper img {
   width: 100%;
   height: 100%;
@@ -36,15 +44,16 @@
 }
 
 .gym__wrapper video {
-  margin-right: 62.5%;
-  margin-left: 37.5%;
-  margin-top: -110px;
+  position: absolute;
+  left: 38%;
+  top: 290px;
   cursor: pointer;
   width: 364px;
   height: 228px;
   object-fit: cover;
 
   @include vp-1199 {
+    position: static;
     width: 266px;
     height: 167px;
     margin: 0 auto;

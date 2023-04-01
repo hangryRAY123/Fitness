@@ -91,6 +91,7 @@
   align-self: flex-end;
   padding: 23px 0;
   letter-spacing: 1px;
+  margin-top: 10px;
 
   @include vp-1199 {
     font-size: 10px;
@@ -98,6 +99,10 @@
     border-width: 2px;
     letter-spacing: 0.5px;
     padding: 12px 0;
+  }
+
+  @include vp-767 {
+    margin-top: 0;
   }
 }
 
