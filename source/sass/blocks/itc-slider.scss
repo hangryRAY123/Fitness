@@ -16,6 +16,10 @@
   width: 1160px;
   margin: 0 auto;
 
+  &--reviews {
+    width: 100%;
+  }
+
   @include vp-1199 {
     width: 100%;
   }

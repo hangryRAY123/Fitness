@@ -1652,6 +1652,10 @@ button,
   margin: 0 auto;
 }
 
+.itc-slider__wrapper--reviews {
+  width: 100%;
+}
+
 .itc-slider__items {
   display: -webkit-box;
   display: -ms-flexbox;
