@@ -96,6 +96,8 @@
   text-align: right;
   grid-column: 2;
   letter-spacing: 1px;
+  max-width: 200px;
+  justify-self: end;
 
   @include vp-1199 {
     font-size: 34px;
@@ -122,6 +124,8 @@
   text-align: right;
   grid-column: 2;
   letter-spacing: 5px;
+  max-width: 250px;
+  justify-self: end;
 
   @include vp-1199 {
     font-weight: 700;
@@ -146,11 +150,10 @@
   @include vp-1199 {
     letter-spacing: 0.5px;
     max-width: 100%;
-    padding: 18px 0;
+    padding: 18px 20px;
   }
 
   @include vp-767 {
     grid-column: 1/-1;
-    padding: 18px 0;
   }
 }

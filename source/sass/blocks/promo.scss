@@ -54,6 +54,7 @@
   margin-right: 58px;
   letter-spacing: 3px;
   margin-left: 10px;
+  max-width: 185px;
 
   @include vp-1199 {
     font-size: 48px;
@@ -100,7 +101,7 @@
     line-height: 12px;
     border-width: 2px;
     letter-spacing: 0.5px;
-    padding: 12px 0;
+    padding: 12px 20px;
   }
 
   @include vp-767 {

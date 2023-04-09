@@ -957,6 +957,9 @@ button,
   -ms-grid-column: 2;
   grid-column: 2;
   letter-spacing: 1px;
+  max-width: 200px;
+  -ms-grid-column-align: end;
+  justify-self: end;
 }
 
 .entry__inner h1 {
@@ -970,6 +973,9 @@ button,
   -ms-grid-column: 2;
   grid-column: 2;
   letter-spacing: 5px;
+  max-width: 250px;
+  -ms-grid-column-align: end;
+  justify-self: end;
 }
 
 .entry__inner a {
@@ -1400,6 +1406,7 @@ button,
   margin-right: 58px;
   letter-spacing: 3px;
   margin-left: 10px;
+  max-width: 185px;
 }
 
 .promo__inner p {
@@ -2633,7 +2640,7 @@ button,
   .entry__inner a {
     letter-spacing: 0.5px;
     max-width: 100%;
-    padding: 18px 0;
+    padding: 18px 20px;
   }
 
   .gym {
@@ -2781,7 +2788,7 @@ button,
     line-height: 12px;
     border-width: 2px;
     letter-spacing: 0.5px;
-    padding: 12px 0;
+    padding: 12px 20px;
   }
 
   .promo__list {
@@ -3201,7 +3208,6 @@ button,
 
   .entry__inner a {
     grid-column: 1/-1;
-    padding: 18px 0;
   }
 
   .gym {
