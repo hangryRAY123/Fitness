@@ -38,6 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
       video.style.opacity = '0';
       video.style.visibility = 'hidden';
       youtube.src += '?autoplay=1';
+      youtube.style.zIndex = '5';
     }
   };
 
@@ -53,6 +54,7 @@ window.addEventListener('DOMContentLoaded', () => {
     video.style.opacity = '0';
     video.style.visibility = 'hidden';
     youtube.src += '?autoplay=1';
+    youtube.style.zIndex = '5';
     video.removeEventListener('keydown', onEnterKeydown);
   });
 
