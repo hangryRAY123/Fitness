@@ -27,7 +27,7 @@
 
 .itc-slider__items {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, height 0.5s ease;
   will-change: transform;
   align-items: center;
   height: auto;

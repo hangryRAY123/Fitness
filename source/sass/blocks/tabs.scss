@@ -78,6 +78,7 @@
 
 .tabs__content {
   height: 100%;
+  transition: height 0.5s ease;
 
   @include vp-1199 {
     width: 442px;
