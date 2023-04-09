@@ -309,15 +309,71 @@
                   />
                 </picture>
               </noscript>
-              <video
-                class="lazyload"
-                width="364"
-                height="228"
-                poster="img/video/video-mobile.jpg"
-                controls
-              >
-                <source src="img/video/video.mp4" type="video/mp4" />
-              </video>
+              <div class="gym__video">
+                <div class="gym__video-wrapper">
+                  <iframe
+                    width="364"
+                    height="228"
+                    src="https://www.youtube.com/embed/9TZXsZItgdw"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    data-validate="youtube"
+                  ></iframe>
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                      srcset="
+                        img/video/video-mobile.webp    1x,
+                        img/video/video-mobile@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        img/video/video-mobile.jpg    1x,
+                        img/video/video-mobile@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 1199px)"
+                      type="image/webp"
+                      srcset="
+                        img/video/video-tablet.webp    1x,
+                        img/video/video-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 1199px)"
+                      srcset="
+                        img/video/video-tablet.jpg    1x,
+                        img/video/video-tablet@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/video/video-desktop.webp    1x,
+                        img/video/video-desktop@2x.webp 2x
+                      "
+                    />
+                    <img
+                      src="img/video/video-desktop.jpg"
+                      srcset="
+                        img/video/video-desktop.jpg    1x,
+                        img/video/video-desktop@2x.jpg 2x
+                      "
+                      width="364"
+                      height="228"
+                      alt="Тренажерный зал."
+                      data-validate="video"
+                      tabindex="0"
+                    />
+                  </picture>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -328,7 +384,7 @@
           <div class="container">
             <div class="subscriptions__wrapper">
               <h2>Абонементы</h2>
-              <div class="tabs" data-tabs="parent" data-height="max">
+              <div class="tabs" data-tabs="parent">
                 <div class="tabs__controls" data-tabs="controls">
                   <button
                     class="tabs__control"
@@ -1875,7 +1931,7 @@
                 </noscript>
               </div>
               <ul class="promotions__list">
-                <li class="promotions__item" tabindex="0">
+                <li class="promotions__item">
                   <h3>Месяц бесплатно</h3>
                   <p>Приведи друга, получи абонемент в&nbsp;подарок</p>
                   <a href="#">Подробнее</a>
@@ -1892,7 +1948,7 @@
 
         <!-- Отзывы  -->
 
-        <section class="reviews">
+        <section class="reviews" data-validate="reviews">
           <div class="container">
             <div class="reviews__wrapper">
               <h2>Отзывы</h2>
@@ -1902,7 +1958,7 @@
                 data-loop="false"
               >
                 <div class="itc-slider__wrapper">
-                  <div class="itc-slider__items">
+                  <div class="itc-slider__items" data-validate="slider-height">
                     <div class="itc-slider__item itc-slider__item--reviews">
                       <div class="reviews__item">
                         <picture data-validate="picture">
@@ -2190,6 +2246,7 @@
                 <button
                   class="itc-slider__btn itc-slider__btn_next itc-slider__btn_next--reviews"
                   type="button"
+                  data-validate="btn-slider"
                 >
                   <span class="visually-hidden">Слудующий слайд.</span>
                 </button>

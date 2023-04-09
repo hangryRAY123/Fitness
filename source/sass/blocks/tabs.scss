@@ -234,7 +234,7 @@
   color: $color-dark;
   border: 2px solid $color-dark;
   letter-spacing: 1px;
-  padding: 23px 0;
+  padding: 23px 20px;
 
   @include vp-767 {
     letter-spacing: 0.5px;

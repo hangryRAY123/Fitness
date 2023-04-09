@@ -74,11 +74,13 @@
   font-size: 18px;
   line-height: 27px;
   grid-column: 1/-1;
+  max-width: 345px;
 
   @include vp-1199 {
     font-size: 12px;
     line-height: 18px;
     margin-top: -5px;
+    max-width: 200px;
   }
 
   @include vp-767 {
@@ -89,7 +91,7 @@
 .promo__inner a {
   grid-column: 1/-1;
   align-self: flex-end;
-  padding: 23px 0;
+  padding: 23px 20px;
   letter-spacing: 1px;
   margin-top: 10px;
 
@@ -111,6 +113,11 @@
   display: flex;
   flex-direction: column;
   margin-top: -6px;
+  max-width: 95px;
+
+  @include vp-1199 {
+    max-width: 60px;
+  }
 }
 
 .promo__item {

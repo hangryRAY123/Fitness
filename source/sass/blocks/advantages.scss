@@ -80,6 +80,20 @@
 .advantages__item {
   display: grid;
   grid-template-columns: repeat(2, auto);
+  position: relative;
+
+  &:nth-child(n + 4)::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: rgba(209, 10, 66, 0.2);
+    top: -70px;
+
+    @include vp-1199 {
+      display: none;
+    }
+  }
 
   @include vp-1199 {
     justify-content: flex-start;
@@ -191,34 +205,6 @@
   margin-bottom: auto;
   height: max-content;
   justify-self: center;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 340px;
-    height: 2px;
-    background-color: rgba(209, 10, 66, 0.2);
-    top: 50%;
-    left: -167%;
-
-    @include vp-1199 {
-      display: none;
-    }
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 340px;
-    height: 2px;
-    background-color: rgba(209, 10, 66, 0.2);
-    top: 50%;
-    left: 124%;
-
-    @include vp-1199 {
-      display: none;
-    }
-  }
 
   @include vp-1199 {
     grid-column: 1/ -1;

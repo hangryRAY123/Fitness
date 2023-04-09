@@ -8,13 +8,52 @@ import {ItcSlider} from './vendor/itc-slider';
 
 window.addEventListener('DOMContentLoaded', () => {
   const picture = document.querySelectorAll('[data-validate="picture"]');
+  const video = document.querySelector('[data-validate="video"]');
+  const youtube = document.querySelector('[data-validate="youtube"]');
   const slider = document.querySelectorAll('.itc-slider');
   const tabs = document.querySelector('[data-tabs="content"]');
+  const reviews = document.querySelector('[data-validate="reviews"]');
+  const reviewsSlider = reviews.querySelectorAll('.itc-slider__item');
+  const sliderHeight = document.querySelector('[data-validate="slider-height"]');
+
+  const observer = new MutationObserver((entries) => {
+    for (let entry of entries) {
+      if (entry.target.classList.contains('itc-slider__item_active')) {
+        const height = entry.target.offsetHeight;
+        sliderHeight.style.height = `${height}px`;
+      }
+    }
+  });
+
+  const config = {attributes: true, childList: true, characterData: true};
+
+  reviewsSlider.forEach((el) => {
+    observer.observe(el, config);
+  });
+
+
+  const onEnterKeydown = (evt) => {
+    if (evt.key === 'Enter') {
+      evt.preventDefault();
+      video.style.opacity = '0';
+      video.style.visibility = 'hidden';
+      youtube.src += '?autoplay=1';
+    }
+  };
+
+  video.addEventListener('keydown', onEnterKeydown);
 
   tabs.classList.remove('tabs__content--nojs');
 
   picture.forEach((e) => {
     e.style.display = 'block';
+  });
+
+  video.addEventListener('click', function () {
+    video.style.opacity = '0';
+    video.style.visibility = 'hidden';
+    youtube.src += '?autoplay=1';
+    video.removeEventListener('keydown', onEnterKeydown);
   });
 
   // Utils

@@ -163,6 +163,7 @@
   flex-direction: column;
   padding: 35px;
   z-index: 1;
+  min-height: 211px;
 
   &::before {
     display: block;

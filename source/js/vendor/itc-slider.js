@@ -178,6 +178,8 @@ export class ItcSlider {
 
   #onResize() {
     window.requestAnimationFrame(this.#reset.bind(this));
+    const btnSlider = document.querySelector('[data-validate="btn-slider"]');
+    btnSlider.classList.remove('itc-slider__btn_hide');
   }
 
   #onSwipeStart(e) {

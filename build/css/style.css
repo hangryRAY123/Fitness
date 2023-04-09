@@ -726,7 +726,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 18px 0;
+  padding: 18px 20px;
   width: 100%;
   color: #ffffff;
   background-color: transparent;
@@ -943,6 +943,7 @@ button,
   -ms-grid-column-align: start;
   justify-self: start;
   text-align: right;
+  max-width: 113px;
 }
 
 .entry__inner p {
@@ -1007,15 +1008,35 @@ button,
   object-fit: contain;
 }
 
-.gym__wrapper video {
+.gym__video {
   position: absolute;
   left: 38%;
   top: 290px;
-  cursor: pointer;
   width: 364px;
   height: 228px;
-  -o-object-fit: cover;
-  object-fit: cover;
+}
+
+.gym__video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.gym__video iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  z-index: -1;
+}
+
+.gym__video img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
 .gym__inner {
@@ -1277,7 +1298,7 @@ button,
   color: #102654;
   border: 2px solid #102654;
   letter-spacing: 1px;
-  padding: 23px 0;
+  padding: 23px 20px;
 }
 
 .tabs__content--nojs [data-tabs=element] {
@@ -1387,12 +1408,13 @@ button,
   font-size: 18px;
   line-height: 27px;
   grid-column: 1/-1;
+  max-width: 345px;
 }
 
 .promo__inner a {
   grid-column: 1/-1;
   align-self: flex-end;
-  padding: 23px 0;
+  padding: 23px 20px;
   letter-spacing: 1px;
   margin-top: 10px;
 }
@@ -1408,6 +1430,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   margin-top: -6px;
+  max-width: 95px;
 }
 
 .promo__item {
@@ -1464,6 +1487,10 @@ button,
   padding-bottom: 90px;
 }
 
+.coaches .container {
+  max-width: 1320px;
+}
+
 .coaches__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1481,15 +1508,25 @@ button,
   line-height: 65px;
   margin-bottom: 48px;
   letter-spacing: 2px;
+  width: 100%;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .coaches__item {
   position: relative;
 }
 
-.coaches__item:hover .coaches__description {
+.coaches__item:hover .coaches__description,
+.coaches__item:focus .coaches__description {
   visibility: visible;
   opacity: 1;
+}
+
+.coaches__item:hover figcaption,
+.coaches__item:focus figcaption {
+  opacity: 0;
 }
 
 .coaches__item img {
@@ -1513,6 +1550,9 @@ button,
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.3s ease-in;
+  -o-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 
 .coaches__description {
@@ -1608,6 +1648,8 @@ button,
 
 .itc-slider__wrapper {
   overflow: hidden;
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .itc-slider__items {
@@ -1620,6 +1662,10 @@ button,
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   will-change: transform;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
 }
 
 .itc-slider__transition-none {
@@ -1676,6 +1722,7 @@ button,
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  padding: 0;
 }
 
 .itc-slider__btn.focus-visible:focus {
@@ -1687,11 +1734,19 @@ button,
 }
 
 .itc-slider__btn_prev {
-  left: -70px;
+  left: -10px;
+}
+
+.itc-slider__btn_prev--reviews {
+  left: -67px;
 }
 
 .itc-slider__btn_next {
-  right: -70px;
+  right: -10px;
+}
+
+.itc-slider__btn_next--reviews {
+  right: -67px;
 }
 
 .itc-slider__btn:hover,
@@ -1703,7 +1758,7 @@ button,
 .itc-slider__btn::before {
   content: "";
   display: inline-block;
-  width: 16px;
+  width: 20px;
   height: 32px;
   background: transparent no-repeat center center;
   background-size: 100% 100%;
@@ -1809,6 +1864,16 @@ button,
   display: grid;
   -ms-grid-columns: (auto)[2];
   grid-template-columns: repeat(2, auto);
+  position: relative;
+}
+
+.advantages__item:nth-child(n+4)::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: rgba(209, 10, 66, 0.2);
+  top: -70px;
 }
 
 .advantages__item div {
@@ -1892,26 +1957,6 @@ button,
   height: max-content;
   -ms-grid-column-align: center;
   justify-self: center;
-}
-
-.advantages__item--center::before {
-  position: absolute;
-  content: "";
-  width: 340px;
-  height: 2px;
-  background-color: rgba(209, 10, 66, 0.2);
-  top: 50%;
-  left: -167%;
-}
-
-.advantages__item--center::after {
-  position: absolute;
-  content: "";
-  width: 340px;
-  height: 2px;
-  background-color: rgba(209, 10, 66, 0.2);
-  top: 50%;
-  left: 124%;
 }
 
 .advantages__item--center b {
@@ -2051,6 +2096,7 @@ button,
   flex-direction: column;
   padding: 35px;
   z-index: 1;
+  min-height: 211px;
 }
 
 .promotions__item::before {
@@ -2182,8 +2228,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
 }
 
 .free-lesson__wrapper {
@@ -2206,6 +2250,10 @@ button,
   line-height: 84px;
   margin-bottom: 15px;
   letter-spacing: 1.5px;
+}
+
+.free-lesson__form {
+  margin-top: auto;
 }
 
 .free-lesson__form form {
@@ -2366,6 +2414,9 @@ button,
   flex-direction: column;
   width: 100%;
   margin-bottom: 15px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .contacts__item:last-child {
@@ -2601,12 +2652,14 @@ button,
     align-self: stretch;
   }
 
-  .gym__wrapper video {
+  .gym__video {
     position: static;
-    width: 266px;
-    height: 167px;
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding-left: 206px;
+    padding-right: 206px;
     margin-top: -85px;
+    min-height: 167px;
   }
 
   .gym__inner {
@@ -2716,6 +2769,7 @@ button,
     font-size: 12px;
     line-height: 18px;
     margin-top: -5px;
+    max-width: 200px;
   }
 
   .promo__inner a {
@@ -2724,6 +2778,10 @@ button,
     border-width: 2px;
     letter-spacing: 0.5px;
     padding: 12px 0;
+  }
+
+  .promo__list {
+    max-width: 60px;
   }
 
   .promo__item {
@@ -2764,12 +2822,22 @@ button,
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
-    margin-right: 34px;
+    padding-right: 34px;
     letter-spacing: 1.7px;
+    text-align: center;
   }
 
   .coaches__item:hover .coaches__description {
     visibility: hidden;
+    opacity: 0;
+  }
+
+  .coaches__item:hover figcaption {
+    opacity: 1;
+  }
+
+  .coaches__item:active figcaption,
+  .coaches__item:focus figcaption {
     opacity: 0;
   }
 
@@ -2781,6 +2849,10 @@ button,
 
   .coaches__description {
     padding: 52px 50px;
+  }
+
+  .itc-slider__wrapper {
+    width: 100%;
   }
 
   .itc-slider__item {
@@ -2839,6 +2911,10 @@ button,
     column-gap: 30px;
   }
 
+  .advantages__item:nth-child(n+4)::before {
+    display: none;
+  }
+
   .advantages__item {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
@@ -2862,14 +2938,6 @@ button,
     line-height: 30px;
     margin-top: 0;
     margin-bottom: 0;
-  }
-
-  .advantages__item--center::before {
-    display: none;
-  }
-
-  .advantages__item--center::after {
-    display: none;
   }
 
   .advantages__item--center {
@@ -3137,16 +3205,9 @@ button,
     padding-bottom: 70px;
   }
 
-  .gym__wrapper img {
-    margin-bottom: 40px;
-  }
-
-  .gym__wrapper video {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
+  .gym__video {
+    margin-top: 40px;
+    padding: 0;
   }
 
   .gym__inner {
@@ -3298,7 +3359,7 @@ button,
   .coaches__wrapper h2 {
     font-size: 32px;
     line-height: 38px;
-    margin-right: 5px;
+    padding-right: 5px;
     margin-bottom: 40px;
     letter-spacing: 1px;
   }

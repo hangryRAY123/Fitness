@@ -93,6 +93,7 @@
   flex-direction: column;
   width: 100%;
   margin-bottom: 15px;
+  align-items: flex-start;
 
   @include vp-1199 {
     margin-bottom: 20px;

@@ -37,35 +37,52 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-
-  @include vp-767 {
-    margin-bottom: 40px;
-  }
 }
 
-.gym__wrapper video {
+.gym__video {
   position: absolute;
   left: 38%;
   top: 290px;
-  cursor: pointer;
   width: 364px;
   height: 228px;
-  object-fit: cover;
 
   @include vp-1199 {
     position: static;
-    width: 266px;
-    height: 167px;
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding-left: 206px;
+    padding-right: 206px;
     margin-top: -85px;
+    min-height: 167px;
   }
 
   @include vp-767 {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    margin-top: 40px;
+    padding: 0;
   }
+}
+
+.gym__video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.gym__video iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  z-index: -1;
+}
+
+.gym__video img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
 .gym__inner {

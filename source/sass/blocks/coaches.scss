@@ -15,6 +15,10 @@
   }
 }
 
+.coaches .container {
+  max-width: 1320px;
+}
+
 .coaches__wrapper {
   display: flex;
   flex-direction: column;
@@ -36,20 +40,25 @@
   line-height: 65px;
   margin-bottom: 48px;
   letter-spacing: 2px;
+  width: 100%;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
 
   @include vp-1199 {
     font-size: 42px;
     line-height: 50px;
     margin-bottom: 31px;
     align-self: center;
-    margin-right: 34px;
+    padding-right: 34px;
     letter-spacing: 1.7px;
+    text-align: center;
   }
 
   @include vp-767 {
     font-size: 32px;
     line-height: 38px;
-    margin-right: 5px;
+    padding-right: 5px;
     margin-bottom: 40px;
     letter-spacing: 1px;
   }
@@ -58,14 +67,29 @@
 .coaches__item {
   position: relative;
 
-  &:hover .coaches__description {
+  &:hover .coaches__description,
+  &:focus .coaches__description {
     visibility: visible;
     opacity: 1;
+  }
+
+  &:hover figcaption,
+  &:focus figcaption {
+    opacity: 0;
   }
 
   @include vp-1199 {
     &:hover .coaches__description {
       visibility: hidden;
+      opacity: 0;
+    }
+
+    &:hover figcaption {
+      opacity: 1;
+    }
+
+    &:active figcaption,
+    &:focus figcaption {
       opacity: 0;
     }
 
@@ -95,6 +119,7 @@
   bottom: 10px;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in;
 }
 
 .coaches__description {

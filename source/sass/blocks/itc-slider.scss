@@ -13,12 +13,20 @@
 
 .itc-slider__wrapper {
   overflow: hidden;
+  width: 1160px;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    width: 100%;
+  }
 }
 
 .itc-slider__items {
   display: flex;
   transition: transform 0.5s ease;
   will-change: transform;
+  align-items: center;
+  height: auto;
 }
 
 .itc-slider__transition-none {
@@ -77,6 +85,7 @@
   transform: translateY(-50%);
   cursor: pointer;
   transition: opacity $trans-default;
+  padding: 0;
 
   @include hover-focus {
     opacity: 0.5;
@@ -88,7 +97,11 @@
 }
 
 .itc-slider__btn_prev {
-  left: -70px;
+  left: -10px;
+
+  &--reviews {
+    left: -67px;
+  }
 
   @include vp-1199 {
     left: -70px;
@@ -100,7 +113,11 @@
 }
 
 .itc-slider__btn_next {
-  right: -70px;
+  right: -10px;
+
+  &--reviews {
+    right: -67px;
+  }
 
   @include vp-1199 {
     right: -40px;
@@ -124,7 +141,7 @@
 .itc-slider__btn::before {
   content: "";
   display: inline-block;
-  width: 16px;
+  width: 20px;
   height: 32px;
   background: transparent no-repeat center center;
   background-size: 100% 100%;
