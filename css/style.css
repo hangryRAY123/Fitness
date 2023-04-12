@@ -1509,6 +1509,8 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  padding-left: 60px;
+  padding-right: 20px;
 }
 
 .coaches__wrapper h2 {
@@ -1520,8 +1522,6 @@ button,
   letter-spacing: 2px;
   width: 100%;
   max-width: 1160px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .coaches__item {
@@ -1658,7 +1658,7 @@ button,
 
 .itc-slider__wrapper {
   overflow: hidden;
-  width: 1160px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -1690,9 +1690,9 @@ button,
 
 .itc-slider__item {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 300px;
-  flex: 0 0 300px;
-  max-width: 300px;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1748,7 +1748,7 @@ button,
 }
 
 .itc-slider__btn_prev {
-  left: -10px;
+  left: -70px;
 }
 
 .itc-slider__btn_prev--reviews {
@@ -1756,7 +1756,7 @@ button,
 }
 
 .itc-slider__btn_next {
-  right: -10px;
+  right: -30px;
 }
 
 .itc-slider__btn_next--reviews {
@@ -3706,10 +3706,6 @@ button,
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .header {
-    margin-bottom: 0;
-  }
-
   .subscriptions__wrapper::after {
     background-image: -webkit-image-set(url("../img/subscriptions/subscriptions-desktop@2x.webp") 1x, url("../img/subscriptions/subscriptions-desktop@2x.png") 1x);
     background-image: image-set(url("../img/subscriptions/subscriptions-desktop@2x.webp") 1x, url("../img/subscriptions/subscriptions-desktop@2x.png") 1x);
