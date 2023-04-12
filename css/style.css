@@ -1753,6 +1753,7 @@ button,
 
 .itc-slider__btn_prev--reviews {
   left: -67px;
+  top: 120px;
 }
 
 .itc-slider__btn_next {
@@ -1761,6 +1762,7 @@ button,
 
 .itc-slider__btn_next--reviews {
   right: -67px;
+  top: 120px;
 }
 
 .itc-slider__btn:hover,
@@ -3395,8 +3397,16 @@ button,
     left: -45px;
   }
 
+  .itc-slider__btn_prev--reviews {
+    top: 170px;
+  }
+
   .itc-slider__btn_next {
     right: -45px;
+  }
+
+  .itc-slider__btn_next--reviews {
+    top: 170px;
   }
 
   .itc-slider__btn::before {
@@ -3457,6 +3467,7 @@ button,
 
   .advantages__item h3 {
     margin-bottom: 3px;
+    text-align: center;
   }
 
   .advantages__item p {
