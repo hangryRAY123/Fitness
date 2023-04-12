@@ -16,6 +16,24 @@ window.addEventListener('DOMContentLoaded', () => {
   const reviewsSlider = reviews.querySelectorAll('.itc-slider__item');
   const sliderHeight = document.querySelector('[data-validate="slider-height"]');
 
+  const onEnterKeydown = (evt) => {
+    if (evt.key === 'Enter') {
+      evt.preventDefault();
+      video.style.opacity = '0';
+      video.style.visibility = 'hidden';
+      youtube.src += '?autoplay=1';
+      youtube.style.zIndex = '5';
+    }
+  };
+
+  const onVideo = () => {
+    video.style.opacity = '0';
+    video.style.visibility = 'hidden';
+    youtube.src += '?autoplay=1';
+    youtube.style.zIndex = '5';
+    video.removeEventListener('keydown', onEnterKeydown);
+  };
+
   const observer = new MutationObserver((entries) => {
     for (let entry of entries) {
       if (entry.target.classList.contains('itc-slider__item_active')) {
@@ -27,36 +45,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const config = {attributes: true, childList: true, characterData: true};
 
-  reviewsSlider.forEach((el) => {
-    observer.observe(el, config);
-  });
-
-
-  const onEnterKeydown = (evt) => {
-    if (evt.key === 'Enter') {
-      evt.preventDefault();
-      video.style.opacity = '0';
-      video.style.visibility = 'hidden';
-      youtube.src += '?autoplay=1';
-      youtube.style.zIndex = '5';
-    }
-  };
-
-  video.addEventListener('keydown', onEnterKeydown);
-
   tabs.classList.remove('tabs__content--nojs');
 
   picture.forEach((e) => {
     e.style.display = 'block';
   });
 
-  video.addEventListener('click', function () {
-    video.style.opacity = '0';
-    video.style.visibility = 'hidden';
-    youtube.src += '?autoplay=1';
-    youtube.style.zIndex = '5';
-    video.removeEventListener('keydown', onEnterKeydown);
+  reviewsSlider.forEach((el) => {
+    observer.observe(el, config);
   });
+
+  video.addEventListener('keydown', onEnterKeydown);
+  video.addEventListener('click', onVideo);
 
   // Utils
   // ---------------------------------
