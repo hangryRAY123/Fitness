@@ -2726,6 +2726,7 @@ button,
 
   .subscriptions__wrapper {
     margin: 0 auto;
+    width: 442px;
   }
 
   .subscriptions__wrapper h2 {
